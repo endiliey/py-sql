@@ -1,0 +1,6 @@
+SELECT name
+FROM Movie
+INNER JOIN Rating USING(mID)
+INNER JOIN Reviewer USING(rID)
+GROUP BY name
+HAVING COUNT(stars) > 2
