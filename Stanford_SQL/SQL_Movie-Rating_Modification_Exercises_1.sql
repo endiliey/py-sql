@@ -1,2 +1,2 @@
-INSERT INTO Reviewer
-VALUES (209, 'Roger Ebert')
+insert into Reviewer(rID, name) 
+values (209, 'Roger Ebert')
