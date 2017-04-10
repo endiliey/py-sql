@@ -1,0 +1,10 @@
+SELECT title, AVG(stars)
+FROM Movie
+INNER JOIN Rating USING(mID)
+GROUP BY title
+HAVING AVG(stars) IN (SELECT AVG(stars)
+FROM Movie
+INNER JOIN Rating USING(mID)
+GROUP BY title
+ORDER BY AVG(stars)
+LIMIT 1)
